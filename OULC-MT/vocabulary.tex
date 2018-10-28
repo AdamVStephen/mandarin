@@ -1,0 +1,172 @@
+\documentclass{article}
+% For Chinese support, recommended by Chou : augmented with xpinyin by sobenlee@gmail.com
+\usepackage{CJKutf8}
+% For xpinyin
+\usepackage{xpinyin}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% From Chou
+\usepackage{ucs} 
+\usepackage[encapsulated]{CJK}
+% Font choices
+% bsmi limited - lacks certain characters
+%\newcommand{\myfont}{bsmi} % or {stheiti}, etc
+% gbsn recommended from sobenlee@gmail.com in xpinyin documentation
+\newcommand{\myfont}{gbsn} % or {stheiti}, etc
+% For Exam/Question support taken from en.wikibooks.org/wiki/LaTeX/List\_Structures
+\usepackage{tasks}
+\usepackage{exsheets}
+\SetupExSheets[question]{type=exam}
+% Personal macros
+\newcommand{\cvoc}[1]{#1 & \xpinyin*{#1} }
+\newcommand{\cvct}[3]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 \\ \hline}
+\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & #2 & \pinyin{#3} & #4 \\ \hline}
+\begin{document} 
+\begin{CJK}{UTF8}{\myfont} 
+  
+  \section{Vocabulary}
+  \Large
+
+  \subsection{Greeting Phrases}
+
+  From lesson one.
+  
+  \begin{tabular}{|l|l|l|l|} \hline
+    % hanzi & \xpinyin*{hanzi} & \pinyin{code} & translation \\ 
+    你 & \xpinyin*{你}  & \pinyin{ni3}  & you \\ \hline
+    好 & \xpinyin*{好}  & \pinyin{hao3}  & \\ \hline
+
+    \cvoc{好} & \pinyin{hao3} & good, fine; well \\ \hline
+
+    \cvct{好}{hao3}{good, fine; well. Via macro}
+    \cvct{上午好}{shang4wu3 hao3}{Good morning}
+    \cvct{下午好}{xia4wu3hao3}{Good afternoon}
+    \cvct{晚上好}{wan3shang hao3}{Good evening}
+    \cvct{谢谢}{xie4xie}{Thanks (this character is a nightmare to find)}
+    \cvct{再见}{zai4jian4}{Goodbye}
+
+  \end{tabular}
+%  \vfill\eject
+
+  \subsection{Personal Pronouns}
+
+  From lesson one.
+  
+  \begin{tabular}{|l|l|l|l|} \hline
+    \cvct{我}{wo3}{I, me}
+    \cvct{你}{ni3}{you}
+    \cvct{他}{ta1}{he}
+    \cvct{她}{ta1}{she}
+    \cvct{它}{ta1}{it}
+
+    \cvct{我们}{wo3men}{we}
+    \cvct{你们}{ni3men}{you}
+    \cvct{他们}{ta1men}{they (masc)}
+    \cvct{她们}{ta1men}{they (fem)}
+    \cvct{它们}{ta1men}{they (neut)}
+  \end{tabular}
+  \vfill\eject
+
+    \subsection{Numbers}
+
+  From lesson two.
+
+    \begin{tabular}{|l|l|l|l|} \hline
+      \cvct{零}{ling2}{Zero}
+      \cvct{一}{yi1}{One}
+      \cvct{二}{er4}{Two}
+      \cvct{三}{san1}{Three}
+      \cvct{四}{si4}{Four}
+      \cvct{五}{wu3}{Five}
+      \cvct{六}{liu4}{Six}
+      \cvct{七}{qi1}{Seven}
+      \cvct{八}{ba1}{Eight}
+      \cvct{九}{jiu3}{Nine}
+      \cvct{十}{shi}{Ten}
+      
+    \end{tabular}
+
+    \subsection{Greetings 2}
+
+  From lesson two.
+
+  Handy greetings.
+
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{您}{nin}{adv}{You (polite)}
+      \cvctp{不}{bu4}{adv}{no, not; negative prefix}
+      \cvctp{不错}{bu4cuo2}{phr}{not bad/pretty good}
+      \cvctp{还可以}{hai2ke3yi3}{phr}{OK, pretty good}
+      \cvctp{马马虎虎}{ma3ma3hu1hu1}{phr}{so-so}
+      \cvctp{怎么痒}{zen3meyang4}{phr}{How are things?}
+      \cvctp{也}{ye3}{adv}{also, too, means things are the same}
+    \end{tabular}
+
+    Times of day
+
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{早上}{zao3shang}{n}{Early morning (before 9am/work)}
+      \cvctp{上午}{shang4wu3}{n}{Morning (9-lunch)}
+      \cvctp{中午}{zhong1wu3}{n}{Noon (11.30-2)}
+      \cvctp{下午}{xia4wu3}{n}{Afternoon (2-6/dark)}
+      \cvctp{晚上}{wan3shang}{n}{Evening (6/dark onwards)}
+    \end{tabular}
+    
+    (TODO) ... Noting some key subcomponents from the above.
+
+    Some useful verbs
+
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{来}{lai2}{v}{Come.}
+      \cvctp{请}{qing1}{v}{Invite (and pay for).  Also please.}
+      \cvctp{坐}{zuo4}{v}{Sit.}
+      \cvctp{}{}{}{}
+    \end{tabular}
+    
+    Some handy adverbs and adjectives
+    
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{忙}{mang2}{adj}{busy}
+      \cvctp{累}{lei4}{adj}{tired（difficult character to locate in typing)}
+      \cvctp{晚}{wan3}{adj}{late}
+    \end{tabular}
+
+    Two new particles
+    
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{了}{le}{par}{Past/Completed.  Forms the past tense with a verb.}
+      \cvctp{呢}{ne}{par}{What about?  And ?  Where is?  Highly useful and flexible particle.}
+    \end{tabular}
+
+    Finally - a few very handy phrases
+    
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{不客气}{bu2ke2qi}{}{}
+      \cvctp{不用谢}{bu2yong4xie4}{}{}
+      \cvctp{对不起}{dui4buqi3}{}{}
+      \cvctp{没}{mei2guan1xi}{}{}
+    \end{tabular}
+
+    \section{Dialogues}
+
+    \subsection{Lesson Two}
+
+    
+\subsection{How This Was Made}
+
+\LaTeX setup notes as follows :
+
+\begin{enumerate}
+\item Set up CJK etc using Ubuntu packages and notes from Dr Chou.
+\item List structures and exam style questions references via en.wikibooks.org/wiki/LaTeX/List\_Structures
+\end{enumerate}
+
+\subsection{IP/Copyright}
+
+In respect of the content, Dr. Wendy Che, and to an extent yet to be determined, her employer, the University of Oxford Language Center.
+
+In respect of the write up and typesetting, Dr. Adam Vercingetorix Stephen.
+
+
+\end{CJK} 
+\end{document}
