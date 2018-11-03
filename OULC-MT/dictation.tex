@@ -1,0 +1,99 @@
+\documentclass{article}
+% For Chinese support, recommended by Chou : augmented with xpinyin by sobenlee@gmail.com
+\usepackage{CJKutf8}
+% For xpinyin
+\usepackage{xpinyin}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% From Choud
+\usepackage{ucs} 
+\usepackage[encapsulated]{CJK}
+% Font choices
+% bsmi limited - lacks certain characters
+%\newcommand{\myfont}{bsmi} % or {stheiti}, etc
+% gbsn recommended from sobenlee@gmail.com in xpinyin documentation
+\newcommand{\myfont}{gbsn} % or {stheiti}, etc
+% For Exam/Question support taken from en.wikibooks.org/wiki/LaTeX/List\_Structures
+\usepackage{tasks}
+\usepackage{exsheets}
+\SetupExSheets[question]{type=exam}
+% Personal macros
+\newcommand{\cvoc}[1]{#1 & \xpinyin*{#1} }
+\newcommand{\cvct}[3]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 \\ \hline}
+\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 & #4 \\ \hline}
+\begin{document} 
+\begin{CJK}{UTF8}{\myfont} 
+  
+  \section{Dictation}
+
+  This document sets out the expected characters that we are trying to learn and be able to write in dictation tests each week.   It doesn't indicate the stroke order, but these are listed on the accompanying handouts.   It complements the vocabulary set which is a wider range of words and characters to be able to say, hear and read.
+  
+  \Large
+
+  \section{Lesson 2}
+
+  For testing in lesson 3.
+
+  \subsection{Numbers}
+  
+  \begin{tabular}{|l|l|l|l|} \hline
+    \cvct{零}{ling2}{Zero}
+    \cvct{一}{yi1}{One}
+    \cvct{二}{er4}{Two}
+    \cvct{三}{san1}{Three}
+    \cvct{四}{si4}{Four}
+    \cvct{五}{wu3}{Five}
+    \cvct{六}{liu4}{Six}
+    \cvct{七}{qi1}{Seven}
+    \cvct{八}{ba1}{Eight}
+    \cvct{九}{jiu3}{Nine}
+    \cvct{十}{shi}{Ten}
+    
+  \end{tabular}
+  
+  \subsection{Personal Pronouns/ Misc}
+  
+  \begin{tabular}{|l|l|l|l|} \hline
+    \cvct{你}{ni3}{you}
+    \cvct{好}{hao3}{good, well}
+    \cvct{国}{guo2}{kingdom, country}
+    \cvct{人}{ren2}{person}
+    \cvct{他}{ta1}{he}
+    \cvct{她}{ta1}{she}
+    \cvct{它}{ta1}{it}
+    \cvct{我}{wo3}{I, me}
+    \cvct{们}{men}{plural of personal pronouns}
+  \end{tabular}
+
+  \vfill\eject
+  
+  \section{Lesson 3}
+
+  For testing in lesson 4.
+
+  \subsection{Numbers}
+  
+  \begin{tabular}{|l|l|l|l|} \hline
+    \cvct{零}{ling2}{Zero}
+    \cvct{一}{yi1}{One}
+    \cvct{二}{er4}{Two}
+    \cvct{三}{san1}{Three}
+    \cvct{四}{si4}{Four}
+    \cvct{五}{wu3}{Five}
+    \cvct{六}{liu4}{Six}
+    \cvct{七}{qi1}{Seven}
+    \cvct{八}{ba1}{Eight}
+    \cvct{九}{jiu3}{Nine}
+    \cvct{十}{shi}{Ten}
+    
+  \end{tabular}
+
+\subsection{IP/Copyright}
+
+In respect of the content, Dr. Wendy Che, and to an extent yet to be determined, her employer, the University of Oxford Language Center.
+
+In respect of the write up and typesetting, Dr. Adam Vercingetorix Stephen.
+
+
+\end{CJK} 
+\end{document}

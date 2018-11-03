@@ -5,7 +5,7 @@
 \usepackage{xpinyin}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-% From Chou
+% From Choud
 \usepackage{ucs} 
 \usepackage[encapsulated]{CJK}
 % Font choices
@@ -20,7 +20,7 @@
 % Personal macros
 \newcommand{\cvoc}[1]{#1 & \xpinyin*{#1} }
 \newcommand{\cvct}[3]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 \\ \hline}
-\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & #2 & \pinyin{#3} & #4 \\ \hline}
+\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 & #4 \\ \hline}
 \begin{document} 
 \begin{CJK}{UTF8}{\myfont} 
   
@@ -30,6 +30,7 @@
   \subsection{Greeting Phrases}
 
   From lesson one.
+  \par
   
   \begin{tabular}{|l|l|l|l|} \hline
     % hanzi & \xpinyin*{hanzi} & \pinyin{code} & translation \\ 
@@ -37,7 +38,6 @@
     好 & \xpinyin*{好}  & \pinyin{hao3}  & \\ \hline
 
     \cvoc{好} & \pinyin{hao3} & good, fine; well \\ \hline
-
     \cvct{好}{hao3}{good, fine; well. Via macro}
     \cvct{上午好}{shang4wu3 hao3}{Good morning}
     \cvct{下午好}{xia4wu3hao3}{Good afternoon}
@@ -51,7 +51,7 @@
   \subsection{Personal Pronouns}
 
   From lesson one.
-  
+  \par
   \begin{tabular}{|l|l|l|l|} \hline
     \cvct{我}{wo3}{I, me}
     \cvct{你}{ni3}{you}
@@ -70,7 +70,7 @@
     \subsection{Numbers}
 
   From lesson two.
-
+  \par
     \begin{tabular}{|l|l|l|l|} \hline
       \cvct{零}{ling2}{Zero}
       \cvct{一}{yi1}{One}
@@ -91,7 +91,7 @@
   From lesson two.
 
   Handy greetings.
-
+  \par
     \begin{tabular}{|l|l|l|l|l|} \hline
       \cvctp{您}{nin}{adv}{You (polite)}
       \cvctp{不}{bu4}{adv}{no, not; negative prefix}
@@ -103,7 +103,7 @@
     \end{tabular}
 
     Times of day
-
+  \par
     \begin{tabular}{|l|l|l|l|l|} \hline
       \cvctp{早上}{zao3shang}{n}{Early morning (before 9am/work)}
       \cvctp{上午}{shang4wu3}{n}{Morning (9-lunch)}
@@ -111,35 +111,35 @@
       \cvctp{下午}{xia4wu3}{n}{Afternoon (2-6/dark)}
       \cvctp{晚上}{wan3shang}{n}{Evening (6/dark onwards)}
     \end{tabular}
-    
+      \par
     (TODO) ... Noting some key subcomponents from the above.
 
     Some useful verbs
-
+  \par
     \begin{tabular}{|l|l|l|l|l|} \hline
       \cvctp{来}{lai2}{v}{Come.}
       \cvctp{请}{qing1}{v}{Invite (and pay for).  Also please.}
       \cvctp{坐}{zuo4}{v}{Sit.}
       \cvctp{}{}{}{}
     \end{tabular}
-    
+      \par
     Some handy adverbs and adjectives
-    
+      \par
     \begin{tabular}{|l|l|l|l|l|} \hline
       \cvctp{忙}{mang2}{adj}{busy}
       \cvctp{累}{lei4}{adj}{tired（difficult character to locate in typing)}
       \cvctp{晚}{wan3}{adj}{late}
     \end{tabular}
-
+  \par
     Two new particles
-    
+      \par
     \begin{tabular}{|l|l|l|l|l|} \hline
       \cvctp{了}{le}{par}{Past/Completed.  Forms the past tense with a verb.}
       \cvctp{呢}{ne}{par}{What about?  And ?  Where is?  Highly useful and flexible particle.}
     \end{tabular}
-
+  \par
     Finally - a few very handy phrases
-    
+      \par
     \begin{tabular}{|l|l|l|l|l|} \hline
       \cvctp{不客气}{bu2ke2qi}{}{}
       \cvctp{不用谢}{bu2yong4xie4}{}{}
