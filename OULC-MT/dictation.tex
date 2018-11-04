@@ -1,4 +1,6 @@
 \documentclass{article}
+% Margin control
+\usepackage[a4paper, total={7in, 11in}]{geometry}
 % For Chinese support, recommended by Chou : augmented with xpinyin by sobenlee@gmail.com
 \usepackage{CJKutf8}
 % For xpinyin
@@ -21,6 +23,7 @@
 \newcommand{\cvoc}[1]{#1 & \xpinyin*{#1} }
 \newcommand{\cvct}[3]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 \\ \hline}
 \newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 & #4 \\ \hline}
+
 \begin{document} 
 \begin{CJK}{UTF8}{\myfont} 
   
@@ -87,6 +90,54 @@
     \cvct{十}{shi}{Ten}
     
   \end{tabular}
+
+  \vfill\eject
+  
+  \section{DC1 Unit 1: 20 new characters}
+
+\begin{table}[h!]  
+  \begin{tabular}{|l|l|l|l|} \hline
+
+    \cvct{他}{ta1}{he}
+    \cvct{们}{men}{plural}
+    \cvct{他们}{ta1men}{they (masc)}
+   %%
+    \cvct{姓}{xing}{family;surname}
+   %%
+    \cvct{中}{zhong1}{middle}
+    \cvct{文}{wen2}{kingdom/country}
+    \cvct{中文}{zhong1wen2}{China}
+    %%
+    \cvct{什}{shen2}{what}
+    \cvct{么}{me}{interrogative particle}
+    \cvct{什么}{shen2me}{what}
+    %%
+    \cvct{名}{ming}{name/noun}
+    \cvct{字}{zi4}{letter/character/word}
+    \cvct{子}{zi3}{child}
+    \cvct{名字}{mingzi3}{first/given name}
+    %%
+    \cvct{认}{ren4}{recognize/know/understand}
+    \cvct{识}{shi4}{recognize/understand/know}
+    \cvct{认识}{ren4shi}{to know/to get to know}
+    %%
+    \cvct{高}{gao1}{high/tall/above avverage}
+    \cvct{兴}{xing}{thrive/prosper/flourish}
+    \cvct{高兴}{gao1zing}{glad, happy, willing, cheerful}
+    %%
+    \cvct{对}{dui4}{correct, right; facing, opposed}
+    \cvct{不}{bu4}{not}
+    \cvct{起}{qi3}{rise, standup; go up; begin}
+    \cvct{对不起}{dui4buqi3}{sorry}
+    %%    
+    \cvct{请}{qing3}{ask, request; invite; please}
+    \cvct{问}{wen4}{ask about, inquire after}
+    \cvct{请问}{qing3wen4}{excuse me; please may I ask}
+    %%    
+    \cvct{是}{shi}{to be}
+    \cvct{的}{de}{possessive particle (apostrophe)}
+  \end{tabular}
+\end{table}
 
 \subsection{IP/Copyright}
 

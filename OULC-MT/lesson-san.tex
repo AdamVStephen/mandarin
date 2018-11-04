@@ -1,4 +1,6 @@
 \documentclass{article}
+% Margin control
+\usepackage[a4paper, total={7in, 11in}]{geometry}
 % For Chinese support, recommended by Chou : augmented with xpinyin by sobenlee@gmail.com
 \usepackage{CJKutf8}
 % For xpinyin
@@ -17,162 +19,184 @@
 \usepackage{tasks}
 \usepackage{exsheets}
 \SetupExSheets[question]{type=exam}
+% Personal macros
+\newcommand{\cvoc}[1]{#1 & \xpinyin*{#1} }
+\newcommand{\cvct}[3]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 \\ \hline}
+\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 & #4 \\ \hline}
+% xpe = xpinyin : english
+\newcommand{\xpe}[2]{\xpinyin*{#1} : #2}
+
 \begin{document} 
 \begin{CJK}{UTF8}{\myfont} 
 \section{Lesson 三}
 
 Wednesday 31/10/2018
 
-\subsection{Course Admin}
+\subsection{Homework Checks}
 
-Introduction week.   The course will be based around the {\it Discover China} textbook (ISBN 9780230405950) and optionally the accompanying workbook (ISBN 978923946384).  Use of a hard copy dictionary as a good means of memory training is recommended and the Oxford Starter Chinese Dictionary is a good choice.
+\subsubsection{Dictation Practice}
 
-Our course tutor is Dr Wenbing (Wendy) Che who has an impressive CV and set of qualifications including batchelor's degree in Mechanical Engineering, Doctorate in Business Administration, Diploma in Chinese Medicine and a long and successful track record of teaching Mandarin to business and academic students.    The course runs from W2-W7 in Michaelmas Term (6 classes) and from W1-W7 in Hilary and Trinity Terms.  Certificates of attendance (>80\%) and competence (by exam on reading/writing/listening) may be awarded.
+From week two, we now should know (be able to read and write) the characters :
 
-The course contents for Michaelmas Term will be :
+一， 二， 三， 四， 五， 六， 七， 八， 九， 十  （i.e. the numerals 1--10) as well as
+
+你 好 ； 国 ； 人 ； 他 ； 我 们 
+
+\subsection{Number 11-99}
+
+Very logical.  For multiples of ten, say the multiple, then ten.  Hence forty is ``four ten'' 四十.  Then add the units.  Hence
+twenty-five is ``two-ten five'' or 二十五.
+
+Practice
+
+\begin{tabular}{|l|l|l|l|} \hline
+    72 & 七十二 & 40 & 四十  \\ \hline
+    23 & 二十三 & 51 & 五十一 \\ \hline
+    14 & 十四   & 65 & 六十五 \\ \hline
+    54 & 五十四 & 60 & 六十 \\ \hline
+    76 & 七十六 & 18 & 十八 \\ \hline
+    99 & 九十九 & 21 & 二十八 \\ \hline
+    37 & 三十七 & 83 & 八十三 \\ \hline
+\end{tabular}
+
+\subsection{New Words}
+
+Taken from the vocabulary in the text book, unit 1, supplemented with some of the other words introduced in the lesson.
+
+    \begin{tabular}{|l|l|l|l|l|} \hline
+      \cvctp{您}{nin}{adv}{You (polite)} 
+      \cvctp{姓}{xing}{verb/noun}{Family name/Surname}
+      \cvctp{名字}{mingzi}{verb/noun}{Name}
+      \cvctp{问}{wen4}{verb}{ask}
+      \cvctp{认识}{renshi}{verb}{to know}
+      \cvctp{叫}{jiao4}{verb}{be called}
+      \cvctp{呢}{ne}{particle}{Question particle}
+      \cvctp{什么}{shen2me}{interrogative}{what}
+      \cvctp{高兴}{gao1xing}{adj}{happy; glad}
+      \cvctp{小姐}{xiao3jie3}{title}{Miss (young women)}
+      \cvctp{打}{da3}{verb}{open}
+      \cvctp{开}{kai1}{possessive}{your}
+      \cvctp{书}{shu1}{noun}{book}
+      \cvctp{页}{ye4}{noun}{page}
+      \cvctp{学}{xue2}{verb}{learn}
+      \cvctp{生伺}{sheng1ci}{noun}{new word/vocabulary}
+      \cvctp{跟}{gen1}{verb}{follow}
+      \cvctp{读}{du2}{verb}{to read/pronounce/study}
+    \end{tabular}
+
+    \subsection{Culture and Usage}
+
+    Word order. Note that number comes before noun in the case of : 'open your books to 19 page'.
+
+    Names can cause confusion due to order.    Order is greater meaning first.   Only use first names with close relationships.   Colleagues and classmates use full name, but never use both names for someone of senior rank - this would cause offence.  Use title, or title and surname.  Beware business card double inversion.
+
+    \begin{tabular}{|l|l|}\hline
+      UK & 中国 \\ \hline
+      Given + Family Name & Family + Given Name \\ \hline
+      Mr/Mrs/Miss + Family Name &  Family name + \xpinyin*{先生} / \xpinyin*{女士}/\xpinyin*{小姐} \\ \hline
+      Minister + Family Name & Family + \xpinyin*{先生} \\ \hline
+      Prof + Family Name & Family +  \xpinyin*{叫首} \\ \hline
+      Dr + Family Name & Family +  \xpinyin*{伯是} \\ \hline
+      Doctor (med) + Family Name & Family +  \xpinyin*{一生} \\ \hline
+      
+      Mrs + Husband Family Name &  Husband Family Name + tai4tai \\ \hline
+    \end{tabular}
+
+    TODO : correct the entries for Minister/Prof/Dr/Doctor?mrs based on the pinyin of bu4zhang3 ; jiao4shou4 ; bo2shi4; yi1sheng ; tai4tai
+
+    Note that Chinese women retain their surname on marriage, so to form the Mrs Foo it is necessary to know the surname of their husband.   Conversely if you know Anna Wang, do not assume that her husband is Mr Wang.
+
+\subsection{Teacher's Instructions}
+
+These will be used to tell us what we are doing next on a regular basis :
 
 \begin{enumerate}
-\item W2 Introduction
-\item W3 Greetings and Numbers
-\item W4 Discover China Unit 1
-\item W5 Discover China Unit 2
-\item W6 Discover China Unit 3
-\item W7 Discover China Unit 4
+\item \xpe{请打开书三页}{Please open your book 3 page.}
+\item \xpe{我们学生词}{We learn new words.}
+\item \xpe{请跟我读}{Please follow me reading aloud.}
 \end{enumerate}
 
-\subsection{Mandarin Background}
+\subsection{Textbook Unit 1 / Lesson 1--3}
 
-Mandarin Chinese is the official language of China and the primary dialect of Chinese.  There are 10 major dialects, such as Cantonese.  Dialects are sufficiently different from one another that speakers may find it easier to communicate via a separate common language such as English.   Chinese has fewer phonetic combinations than many Western languages and augments the set of sounds using tones.   Mandarin has foru tones (flat, rising, falling/rising, falling) plus the neutral tone.   Cantonese has eight.   The written language is character based.  Romanised phonetic notation, called pinyin, is used to help beginners learn the sounds, but it is important to learn the characters at the same time.  Pinyin notation includes stress or tone marks.   Tones vary where syllables accrete, though the notation is not changed.
-
-\subsection{Pinyin}
-
-The 26 roman letters are used to indicate 23 consonants/initials, 35 vowels/finals.  Hence there are theoretically $$23\times35=805$$ syllable combinations, though not all are used in practice.   Youtube videos showing how to physically move mouth and tongue to achieve the proper sounds are recommanded.   Tones are critical to comprehensibility.  e.g. The syllable 'Ma' has five different meanings : \xpinyin*{马玛吗麻妈}.
-
-Using the xpinyin package
-
-\begin{tasks}(5)
-  \task \xpinyin*{马}
-  \task \xpinyin*{玛}
-  \task \xpinyin*{吗}
-  \task \xpinyin*{麻}
-  \task \xpinyin*{妈}
-\end{tasks}
-
-\subsection{Written Chinese}
-
-A typical, educated vocabulary will be of the order of 8,000 characters.  A newspaper will use around 2,000.  A tourist sign vocabulary would run to 800.  GCSE teaches around 500.  This course and the text book will develop around 300.
-
-A proposal to move strictly to a phonetic system was made historically, and neatly refuted bu the poet Zhao Yanren via his.
-
-The written form comprises :
+From the dialogues, we can form some standard phrases with the new vocabulary from lesson 1 surrounding basic introductions
 
 \begin{enumerate}
-\item Strokes
-\item Characters
-\item Words
-\item Phrases
+\item \xpe{请问你叫什么}{Please to ask you be called what?}
+\item \xpe{你叫什么名字}{You be called what name?}
+\item \xpe{我认识他}{I to know him}
+\item \xpe{很高兴认识你}{Very glad to know you.}
+\item \xpe{认识你很高兴}{To know you very glad.}
+\item \xpe{小姐}{Miss / Young girl / (prostitute, slang)}
+\item \xpe{你姓什么}{You surname what?}
+\item \xpe{}{}
+\item \xpe{}{}
+\item \xpe{}{}
 \end{enumerate}
 
-Two written forms : Simplified and Traditional, exist for aroudn 1000 characters.  Traditional is used exclusively in Hong Kong and Taiwan.  Simplified for the subset is used in mainland China and was introduced to increase literacy rapidly, particularly among women.
+\subsection{Making Questions}
 
-\subsection{Grammar}
+A good strategy is to work backwards from an answer, and then substitute the noun/pronoun of the answer for a question word.   e.g.   To work out how to ask for a name, start from the construction of the answer.  Thus ``he is called Mark'' transforms to ``he is called What?''.
 
-A few key points.   Some are differences from English.  Some are considerable simplifications compared to other languages.
+In Mandarin :
+
+\begin{question}
+  他叫什么？
+  \begin{tasks}(1)
+  \task 他叫马克 (Ma-ke Mark)
+  \end{tasks}
+\end{question}
+
+\begin{question}
+  他姓什么？
+  \begin{tasks}(1)
+  \task 他姓Jones
+  \end{tasks}
+\end{question}
+
+\subsection{Study Pattern}
+
+When studying the text book dialogues :
 
 \begin{enumerate}
-\item Word order differs.
-\item Time is money, and hence temporal qualifiers come first.
-\item Interrogative is distinguished from declarative by throwing in a question particle.  e.g. You are students (statement).  You are students ma? (question, introduced with the ma particle).
-\item Verbs have no tense : aspects of action (impending/progressive/continuous/conclusive/historical) are indicated via use of aspect particles or model particles.
-\item Verbs have no personal conjugation.  Pronoun plus verb are used simply.
-\item Prepositions are not required.
-\item Optative verbs have a function (TODO: look up what this means).
+\item Read aloud and pronounce the pinyin/characters.
+\item Translate the meaning piecewise.
+\item Synthesise new statements from the learned language.
 \end{enumerate}
 
-A few differences, one of which adds a little more complexity:
+\subsection{Unit 1 / Lesson 2}
 
-\begin{enumerate}
-\item Measure words are required between numbers and nouns.  This occurs too in English : e.g. a cup of coffee (measure word: cup).   In Chinese there are around 300 measure words. They have a rather elaborate sophistication, though younger speakers are tending to reduce the usage where they can. e.g. Rather than separate measure words for brother/sister/sibling, settle on one common one for this group.  If in doubt, the most comment measure word is \xpinyin*{ge} - so this is a good guess.
-\item Always put largest entities/concepts first.  So dates begin with the year.  Identity starts from the nation and builds down.  Culturally, the society is more important than the individual, because logically, the individual has a dependency on the pre-existence of the family/society within which they find themselves.
-\end{enumerate}
+New particle word to indicate possessive like the apostrophe--'s' in English : 的 \xpinyin*{的} and handily the same as in French (de).
 
-\subsection{Practical Speaking Exercise}
+For example.  Mark's book.  Mark 的书.  Marke de shu1.
 
-The group followed pinyin sound exercises based on AV media, being introduced to ``bopomofo'' and so forth.
+New word for a group of several people, as in an audience being addressed fairly formally and for the first time by a speaker (to gain attention) : 大家 (da4jia1) \xpinyin*{大家} - everybody.
+
+\subsection{Pedagogical Points about Textbook}
+
+The textbook asks negative questions by giving 3 statements, only 2 of which are true.  This is not helpful, so our tutor will indicate the errors in advance so we are not mislead.
+
+\subsection{Character Study}
+
+A new dictation sheet (DC1 Unit1) is provided with the followin gcharacters to learn.
+
 
 \subsection{Homework}
 
-For lesson two :
+\subsubsection{Dictation}
 
-\begin{enumerate}
-\item Learn greetings from the handout sheet.
-\item Practice pinyin sounds.
-\end{enumerate}
+DC1 Unit 1 vocabulary.
 
-\subsection{Online Resources}
+\subsubsection{Oral}
 
-\begin{enumerate}
-\item Oxford University Weblearn account where class resources will be uploaded.
-\item mdbg.net--Online dictionary with multiple useful featuers including quiz/translation/fully featured listings.
-\item yellowbridge.com
-\item archchinese.com
-\item pieco.com app
-\item Beijin University course for online characters for beginners (coursera).
-\item www.livethelanguage.cn/how-to-learn-chinese/
-\end{enumerate}
+Prepare to introduce yourself to others (apt).
 
-\subsection{Handout Vocabulary}
+\subsubsection{Written Work}
 
-From the class handouts this week, to learn for next week :
+To be handed in and checked.  Can be received in arrears.
 
+\subsubsection{Class Times/Rooms}
 
-\subsection{Additional Vocabulary}
-
-Also psotted in passing
-
-\begin{enumerate}
-\item Person : \xpinyin*{人}
-\item Dragon : \xpinyin*{}
-\item To buy :\xpinyin*{}
-\item To speak : \xpinyin*{}
-\item Country : \xpinyin*{国}
-\item Flower: \xpinyin*{hua}
-\end{enumerate}
-
-\subsection{Phrases}
-I picked up the following phrases in passing during the class :
-
-\subsection{Quiz}
-
-\begin{tasks}(5)
-  \task 一
-  \task 二
-  \task 三
-  \task 四
-  \task 五
-\end{tasks}
-
-\begin{question}
-  What is the character for the numeral 4 ?
-  \begin{tasks}(5)
-  \task 一
-  \task 二
-  \task 三
-  \task 四
-  \task 五
-\end{tasks}
-
-\end{question}
-
-
-\subsection{How This Was Made}
-
-\LaTeX setup notes as follows :
-
-\begin{enumerate}
-\item Set up CJK etc using Ubuntu packages and notes from Dr Chou.
-\item List structures and exam style questions references via en.wikibooks.org/wiki/LaTeX/List\_Structures
-\end{enumerate}
+Tuesday 9-11 in 301.  Thursday 5-7 in 301.
 
 \subsection{IP/Copyright}
 
