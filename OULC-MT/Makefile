@@ -5,7 +5,7 @@
 	latex $<
 	latex $<
 
-ALL:=lesson-yi.pdf lesson-er.pdf lesson-san.pdf vocabulary.pdf dictation.pdf
+ALL:=lesson-yi.pdf lesson-er.pdf lesson-san.pdf lesson-si.pdf vocabulary.pdf dictation.pdf
 
 
 all : $(ALL)
