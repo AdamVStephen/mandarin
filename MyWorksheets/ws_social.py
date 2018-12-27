@@ -2,13 +2,13 @@
 # -*- coding: UTF-8 -*-
 
 """
-ws-social.py : Mandarin worksheets for social vocabulary
+ws_social.py : Mandarin worksheets for social vocabulary
 """
 
-from manws import TestPhrase, Worksheet
+import pdb
 import sys
 
-import pdb
+from manws import TestPhrase, Worksheet
 
 testPhrases = []
 testPhrases.append(TestPhrase('她没有男朋右' , 'She does not have a boyfriend'))
@@ -16,6 +16,7 @@ testPhrases.append(TestPhrase('李老师没有弟弟', 'Teacher Li does not have
 testPhrases.append(TestPhrase('洗手间在这儿马', 'Is the bathroom here?'))
 testPhrases.append(TestPhrase('没有洗手间这儿', 'There is no bathroom here'))
 testPhrases.append(TestPhrase('老师在那儿', 'The teacher is over there'))
+testPhrases.append(TestPhrase('今天是星期六', 'Today is Saturday'))
 
 def make_worksheets():
     category = 'social'

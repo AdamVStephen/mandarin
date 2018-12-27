@@ -2,18 +2,18 @@
 # -*- coding: UTF-8 -*-
 
 """
-ws-social.py : Mandarin worksheets for social vocabulary
+ws_occupation.py : Mandarin worksheets relating to work/occupation
 """
-
-from manws import TestPhrase, Worksheet
+import pdb
 import sys
 
-import pdb
+from manws import TestPhrase, Worksheet
 
-def ut():
-    testPhrases = []
-    testPhrases.append(TestPhrase('医院在这儿马' , 'Is the hospital over there?'))
-    testPhrases.append(TestPhrase('你的姐姐在饭馆' , 'Your older sister is in the restaurant'))
+testPhrases = []
+testPhrases.append(TestPhrase('医院在这儿马' , 'Is the hospital over there?'))
+testPhrases.append(TestPhrase('你的姐姐在饭馆' , 'Your older sister is in the restaurant'))
+
+def make_worksheets():
     category = 'occupation'
     wh = Worksheet(testPhrases, wsfile='%s-hanzi.tex' % category, giveHanzi=True)
     wp = Worksheet(testPhrases, wsfile='%s-pinyin.tex' % category, givePinyin=True)
@@ -23,4 +23,4 @@ def ut():
     wa = Worksheet(testPhrases, wsfile='%s-answers.tex' % category, giveAnswers=True)
         
 if __name__ == '__main__':
-    ut()
+    make_worksheets()

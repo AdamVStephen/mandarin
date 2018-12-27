@@ -2,12 +2,18 @@
 # -*- coding: UTF-8 -*-
 
 """
-aggreagate.py : Mandarin phrases pulled together from themed worksheets
+aggregate.py : Mandarin phrases pulled together from themed worksheets
 """
 
 from manws import TestPhrase, Worksheet
 
+from ws_occupation import testPhrases as occupationTestPhrases
 from ws_social import testPhrases as socialTestPhrases
 
-if __name__ == '__main__':
+def ut():
+    for tp in occupationTestPhrases: print(tp)
     for tp in socialTestPhrases: print(tp)
+
+if __name__ == '__main__':
+    ut()
+
