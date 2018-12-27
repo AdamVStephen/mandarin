@@ -8,8 +8,8 @@
 ut-english.tex ut-hanzi.tex ut-pinyin.tex ut-xpinyin.tex ut-answers.tex: manws.py template.py
 	./manws.py
 
-social-hanzi.tex social-pinyin.tex social-xpinyin.tex social-english.tex social-answers.tex : ws-social.py
-	./ws-social.py
+social-hanzi.tex social-pinyin.tex social-xpinyin.tex social-english.tex social-answers.tex : ws_social.py
+	./ws_social.py
 
 SUFFICES := hanzi pinyin xpinyin english answers all
 
@@ -21,7 +21,7 @@ OCCUPATION_STUB=occupation
 
 OCCUPATION=$(foreach suffix, $(SUFFICES), $(addsuffix -$(suffix).tex, $(OCCUPATION_STUB)))
 
-$(OCCUPATION) : ./ws-occupation.py
+$(OCCUPATION) : ./ws_occupation.py
 	python3 $<
 
 OCCUPATION_PDF=$(patsubst %.tex,%.pdf, $(OCCUPATION))

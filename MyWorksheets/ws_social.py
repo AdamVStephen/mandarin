@@ -10,10 +10,14 @@ import sys
 
 import pdb
 
-def ut():
-    testPhrases = []
-    testPhrases.append(TestPhrase('她没有男朋右' , 'She does not have a boyfriend'))
-    testPhrases.append(TestPhrase('李老师没有弟弟', 'Teacher Li does not have a younger brother'))
+testPhrases = []
+testPhrases.append(TestPhrase('她没有男朋右' , 'She does not have a boyfriend'))
+testPhrases.append(TestPhrase('李老师没有弟弟', 'Teacher Li does not have a younger brother'))
+testPhrases.append(TestPhrase('洗手间在这儿马', 'Is the bathroom here?'))
+testPhrases.append(TestPhrase('没有洗手间这儿', 'There is no bathroom here'))
+testPhrases.append(TestPhrase('老师在那儿', 'The teacher is over there'))
+
+def make_worksheets():
     category = 'social'
     wh = Worksheet(testPhrases, wsfile='%s-hanzi.tex' % category, giveHanzi=True)
     wp = Worksheet(testPhrases, wsfile='%s-pinyin.tex' % category, givePinyin=True)
@@ -23,4 +27,4 @@ def ut():
     wa = Worksheet(testPhrases, wsfile='%s-answers.tex' % category, giveAnswers=True)
         
 if __name__ == '__main__':
-    ut()
+    make_worksheets()
