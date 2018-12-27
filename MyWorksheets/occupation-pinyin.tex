@@ -1,0 +1,70 @@
+
+\documentclass{article}
+% Margin control
+\usepackage[a4paper, total={7in, 11in}]{geometry}
+% Computing table widths
+\usepackage{calc}
+\newlength\mycolw
+% For Chinese support, recommended by Chou : augmented with xpinyin by sobenlee@gmail.com
+\usepackage{CJKutf8}
+% For xpinyin
+\usepackage{xpinyin}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% From Chou
+\usepackage{ucs} 
+\usepackage[encapsulated]{CJK}
+% Font choices
+% bsmi limited - lacks certain characters
+%\newcommand{\myfont}{bsmi} % or {stheiti}, etc
+% gbsn recommended from sobenlee@gmail.com in xpinyin documentation
+\newcommand{\myfont}{gbsn} % or {stheiti}, etc
+%
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small
+% \normalsize
+% \large
+% \Large
+% \LARGE
+% \huge
+\Huge
+% For Exam/Question support taken from en.wikibooks.org/wiki/LaTeX/List\_Structures
+\usepackage{tasks}
+\usepackage{exsheets}
+\SetupExSheets[question]{type=exam}
+% Personal macros
+\newcommand{\cvoc}[1]{#1 & \xpinyin*{#1} }
+\newcommand{\cvct}[3]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 \\ \hline}
+\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 & #4 \\ \hline}
+% For dictation box setup (todo : write a python generator)
+
+
+%\newcommand{\cvctp}[4]{#1 & \xpinyin*{#1} & \pinyin{#2} & #3 & #4 \\ \hline}
+% xpe = xpinyin : english
+\newcommand{\xpe}[2]{\xpinyin*{#1} : #2}
+
+\begin{document} 
+\begin{CJK}{UTF8}{\myfont} 
+
+\Huge
+\setlength\mycolw{\textwidth/6}
+\addtolength\mycolw{-2\tabcolsep}
+\begin{tabular}{|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|} \hline
+\xpinyin*[ratio={2.}]{\color{white}医} &\xpinyin*[ratio={2.}]{\color{white}院} &\xpinyin*[ratio={2.}]{\color{white}在} &\xpinyin*[ratio={2.}]{\color{white}这} &\xpinyin*[ratio={2.}]{\color{white}儿} &\xpinyin*[ratio={2.}]{\color{white}马} \\ \hline
+\color{white} 我 &\color{white} 我 &\color{white} 我 &\color{white} 我 &\color{white} 我 & \color{white} 我 \\ \hline
+\multicolumn{6}{|l|}{} \\ \hline
+\end{tabular}
+\\ \vspace{0.3 in}
+\setlength\mycolw{\textwidth/7}
+\addtolength\mycolw{-2\tabcolsep}
+\begin{tabular}{|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|p{\mycolw}|} \hline
+\xpinyin*[ratio={2.}]{\color{white}你} &\xpinyin*[ratio={2.}]{\color{white}的} &\xpinyin*[ratio={2.}]{\color{white}姐} &\xpinyin*[ratio={2.}]{\color{white}姐} &\xpinyin*[ratio={2.}]{\color{white}在} &\xpinyin*[ratio={2.}]{\color{white}饭} &\xpinyin*[ratio={2.}]{\color{white}馆} \\ \hline
+\color{white} 我 &\color{white} 我 &\color{white} 我 &\color{white} 我 &\color{white} 我 &\color{white} 我 & \color{white} 我 \\ \hline
+\multicolumn{7}{|l|}{} \\ \hline
+\end{tabular}
+\\ \vspace{0.3 in}
+
+\end{CJK} 
+\end{document}
