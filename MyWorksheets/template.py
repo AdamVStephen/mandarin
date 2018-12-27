@@ -7,6 +7,9 @@ docHeader = r'''
 \documentclass{article}
 % Margin control
 \usepackage[a4paper, total={7in, 11in}]{geometry}
+% Computing table widths
+\usepackage{calc}
+\newlength\mycolw
 % For Chinese support, recommended by Chou : augmented with xpinyin by sobenlee@gmail.com
 \usepackage{CJKutf8}
 % For xpinyin

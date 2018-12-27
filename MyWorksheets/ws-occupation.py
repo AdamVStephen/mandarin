@@ -12,9 +12,9 @@ import pdb
 
 def ut():
     testPhrases = []
-    testPhrases.append(TestPhrase('她没有男朋右' , 'She does not have a boyfriend'))
-    testPhrases.append(TestPhrase('李老师没有弟弟', 'Teacher Li does not have a younger brother'))
-    category = 'social'
+    testPhrases.append(TestPhrase('医院在这儿马' , 'Is the hospital over there?'))
+    testPhrases.append(TestPhrase('你的姐姐在饭馆' , 'Your older sister is in the restaurant'))
+    category = 'occupation'
     wh = Worksheet(testPhrases, wsfile='%s-hanzi.tex' % category, giveHanzi=True)
     wp = Worksheet(testPhrases, wsfile='%s-pinyin.tex' % category, givePinyin=True)
     wx = Worksheet(testPhrases, wsfile='%s-xpinyin.tex' % category, giveXpinyin=True)

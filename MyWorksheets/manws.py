@@ -3,6 +3,8 @@
 
 """
 manws.py : MANdarin WorkSheet generator.
+
+TODO: Replace the out of control TeX coding with a proper template handler.
 """
 
 import sys
@@ -22,46 +24,60 @@ class TestPhrase:
     def giveEnglish(self):
         """Render a table with the English on one line, then lines for Pinyin and Hanzi."""
         s = []
-        s.append('\\begin{tabular}{' + '|l' * self.linewidth + '|} \hline')
-        s.append('\multicolumn{%d}{|l|}{%s} \\\\ \hline' % (self.linewidth, self.translation))
-        s.append(' &' * (self.linewidth-1) + ' \\\\ \hline')
-        s.append(' &' * (self.linewidth-1) + ' \\\\ \hline')
+        s.append('\setlength\mycolw{\\textwidth/%d}' % self.linewidth)
+        s.append(r'''\addtolength\mycolw{-2\tabcolsep}''')
+        #s.append(r'''mycolw is \the\mycolw''')
+        #s.append('\setlength{\\tabcolsep}{\dimexpr(\\textwidth/%d)\relax}' % self.linewidth)
+        s.append('\\begin{tabular}{' + '|p{\mycolw}' * self.linewidth + '|} \hline')
+        s.append('\multicolumn{%d}{|c|}{%s} \\\\ \hline' % (self.linewidth, self.translation))
+        s.append('\color{white} 我 &' * (self.linewidth-1) + ' \color{white} 我 \\\\ \hline')
+        s.append('\color{white} 我 &' * (self.linewidth-1) + ' \color{white} 我 \\\\ \hline')
         s.append('\end{tabular}')
+        s.append('\\\\ \\vspace{0.3 in}')
         return '\n'.join(s)
 
     def giveHanzi(self):
         """Render a table with the Hanzi on one line, then lines for Pinyin and English."""
         s = []
-        s.append('\\begin{tabular}{' + '|l' * self.linewidth + '|} \hline')
+        s.append('\setlength\mycolw{\\textwidth/%d}' % self.linewidth)
+        s.append(r'''\addtolength\mycolw{-2\tabcolsep}''')
+        s.append('\\begin{tabular}{' + '|p{\mycolw}' * self.linewidth + '|} \hline')
         hanziLine = ['%s &' % h for h in self.hanzi[:-1]]
         hanziLine.append('%s' % self.hanzi[-1])
         s.append(''.join(hanziLine) + ' \\\\ \hline')
-        s.append(' &' * (self.linewidth-1) + ' \\\\ \hline')
+        s.append('\color{white} 我 &' * (self.linewidth-1) + ' \color{white} 我 \\\\ \hline')
         s.append('\multicolumn{%d}{|l|}{%s} \\\\ \hline' % (self.linewidth, ''))
         s.append('\end{tabular}')
+        s.append('\\\\ \\vspace{0.3 in}')
         return '\n'.join(s)
 
     def givePinyin(self):
         """Render a table with the Pinyin on one line, then lines for Hanzi and English."""
         s = []
-        s.append('\\begin{tabular}{' + '|l' * self.linewidth + '|} \hline')
+        s.append('\setlength\mycolw{\\textwidth/%d}' % self.linewidth)
+        s.append(r'''\addtolength\mycolw{-2\tabcolsep}''')
+        s.append('\\begin{tabular}{' + '|p{\mycolw}' * self.linewidth + '|} \hline')
         pinyinLine = ['\\xpinyin*[ratio={2.}]{\color{white}%s} &' % h for h in self.hanzi[:-1]]
         pinyinLine.append('\\xpinyin*[ratio={2.}]{\color{white}%s}' % self.hanzi[-1])
         s.append(''.join(pinyinLine) + ' \\\\ \hline')
-        s.append(' &' * (self.linewidth-1) + ' \\\\ \hline')
+        s.append('\color{white} 我 &' * (self.linewidth-1) + ' \color{white} 我 \\\\ \hline')
         s.append('\multicolumn{%d}{|l|}{%s} \\\\ \hline' % (self.linewidth, ''))
         s.append('\end{tabular}')
+        s.append('\\\\ \\vspace{0.3 in}')
         return '\n'.join(s)
 
     def giveXpinyin(self):
         """Render a table with the Hanzi+Pinyin on one line, then a line for English."""
         s = []
-        s.append('\\begin{tabular}{' + '|l' * self.linewidth + '|} \hline')
+        s.append('\setlength\mycolw{\\textwidth/%d}' % self.linewidth)
+        s.append(r'''\addtolength\mycolw{-2\tabcolsep}''')
+        s.append('\\begin{tabular}{' + '|p{\mycolw}' * self.linewidth + '|} \hline')
         xpinyinLine = ['\\xpinyin*{%s} &' % h for h in self.hanzi[:-1]]
         xpinyinLine.append('\\xpinyin*{%s}' % self.hanzi[-1])
         s.append(''.join(xpinyinLine) + ' \\\\ \hline')
         s.append('\multicolumn{%d}{|l|}{%s} \\\\ \hline' % (self.linewidth, ''))
         s.append('\end{tabular}')
+        s.append('\\\\ \\vspace{0.3 in}')
         return '\n'.join(s)
     
     def giveAnswers(self):
@@ -73,6 +89,7 @@ class TestPhrase:
         xpinyinLine.append('\\xpinyin*{%s}' % self.hanzi[-1])
         s.append(''.join(xpinyinLine) + ' \\\\ \hline')
         s.append('\end{tabular}')
+        s.append('\\\\ \\vspace{0.3 in}')
         return '\n'.join(s)
     
     def __repr__(self):
@@ -120,13 +137,13 @@ class Worksheet:
             if self.giveHanzi: doc.append(p.giveHanzi())
             if self.givePinyin: doc.append(p.givePinyin())
             if self.giveXpinyin: doc.append(p.giveXpinyin())
-            doc.append(docFooter)
+        doc.append(docFooter)
         return('\n'.join(doc))
 
     def answerSheet(self):
         doc = []
         doc.append(docHeader)
-         doc.append('\Huge')
+        doc.append('\Huge')
         for p in self.phrases:
             if self.giveEnglish: doc.append(p.giveEnglish())
             if self.giveHanzi: doc.append(p.giveHanzi())
