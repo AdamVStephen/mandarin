@@ -1,6 +1,10 @@
 # mandarin
 My personal course and research notes on learning Mandarin Chinese.
 
+# Keyboard Entry
+To be able to type Mandarin characters into a LaTeX document requires language setup support for Chinese mandarin,
+as well as an editor that can integrate with the appropriate keyboard mechanisms.
+
 # LaTeX Setup
 
 Requires support for Mandarin and fonts.  Also uses some packages from CTAN for exercise sheets and other layout.
